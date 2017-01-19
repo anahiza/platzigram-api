@@ -1,10 +1,25 @@
 'use strict'
 import HttpHash from 'http-hash'
 import { send } from 'micro'
+import Db from 'platzigram-db'
+import DbStub from './test/stub/db'
+import config from './config'
 
+process.env.NODE_ENV = 'test'
+const env = process.env.NODE_ENV || 'production'
 const hash = HttpHash()
+let db = new Db(config.db)
+
+if (env === 'test') {
+  db = new DbStub()
+}
+
 hash.set('GET /:id', async function getPicture (req, res, params) {
-  send(res, 200, params)
+  let id = params.id
+  await db.connect()
+  let image = await db.getImage(id)
+  await db.disconnect()
+  send(res, 200, image)
 })
 
 export default async function main (req, res) {
