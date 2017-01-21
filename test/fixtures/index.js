@@ -7,7 +7,9 @@ export default {
       src: 'http://platzigram.test/3lF0o4vhbGVVfHuCN58MNH.jpg',
       description: '#awesome',
       tags: ['awesome'],
-      createdAt: new Date().toString()
+      createdAt: new Date().toString(),
+      liked: false,
+      likes: 0
     }
   }
 }
