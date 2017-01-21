@@ -12,7 +12,7 @@ test('GET /:id', async t => {
   let srv = micro(pictures)
   let url = await listen(srv)
   let body = await request({ url: `${url}/${image.publicId}`, json: true })
-  t.deepEqual(body, { image })
+  t.deepEqual(body, image)
 })
 
 test.todo('POST /')

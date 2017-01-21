@@ -5,7 +5,6 @@ import Db from 'platzigram-db'
 import DbStub from './test/stub/db'
 import config from './config'
 
-process.env.NODE_ENV = 'test'
 const env = process.env.NODE_ENV || 'production'
 const hash = HttpHash()
 let db = new Db(config.db)

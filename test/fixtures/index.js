@@ -1,10 +1,10 @@
 export default {
   getImage () {
     return {
-      id: 'f06ed374-7d79-4eda-ba76-aee3dfb96da4',
-      publicId: '7jGNYDSp8cCZ5N5qTdC6nW',
+      id: '6e0ccd2d-f55c-4e66-82ed-ad168213fe39',
+      publicId: '3lF0o4vhbGVVfHuCN58MNH',
       userId: 'platzigram',
-      src: 'http://platzigram.test/7jGNYDSp8cCZ5N5qTdC6nW.jpg',
+      src: 'http://platzigram.test/3lF0o4vhbGVVfHuCN58MNH.jpg',
       description: '#awesome',
       tags: ['awesome'],
       createdAt: new Date().toString()
