@@ -11,5 +11,12 @@ export default {
       liked: false,
       likes: 0
     }
+  },
+  getImages () {
+    return [
+      this.getImage(),
+      this.getImage(),
+      this.getImage()
+    ]
   }
 }
