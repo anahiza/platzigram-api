@@ -24,5 +24,16 @@ export default {
       this.getImage(),
       this.getImage()
     ]
+  },
+
+  getUser () {
+    return {
+      id: '233c27da-4f02-4db5-a919-cc90bdb47ec9',
+      publicId: '14udNVfIEECPq48Lryjtih',
+      name: 'Freddy Vega',
+      username: 'f@platzi.test',
+      password: 'pl4tzi',
+      createdAt: new Date().toString()
+    }
   }
 }
