@@ -27,6 +27,6 @@ test('sucess POST /', async t => {
     json: true
   }
   let token = await request(options)
-  let decoded = await utils.verifyToken(token, config.secret)
+  let decoded = await utils.verifyToken(token, config.secret, {})
   t.is(decoded.username, user.username)
 })

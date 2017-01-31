@@ -6,7 +6,7 @@ import DbStub from './test/stub/db'
 import config from './config'
 import utils from './lib/utils'
 
-const env = process.env.NODE_ENV || 'production'
+const env = process.env.NODE_ENV || 'test'
 const hash = HttpHash()
 let db = new Db(config.db)
 
