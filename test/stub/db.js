@@ -7,7 +7,7 @@ export default class Db {
   }
 
   disconnect () {
-    return Promise.resolve(false)
+    return Promise.resolve(true)
   }
 
   getImage (id) {
