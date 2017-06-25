@@ -4,6 +4,7 @@ import { send, json } from 'micro'
 import Db from 'platzigram-db'
 import DbStub from './test/stub/db'
 import config from './config'
+import gravatar from 'gravatar'
 
 const env = process.env.NODE_ENV || 'test'
 const hash = HttpHash()
@@ -27,6 +28,7 @@ hash.set('GET /:username', async function getUser (req, res, params) {
   let username = params.username
   await db.connect()
   let user = await db.getUser(username)
+  user.avatar = gravatar.url(user.email)
   delete user.email
   delete user.password
   send(res, 201, user)
