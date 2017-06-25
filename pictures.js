@@ -1,10 +1,12 @@
 'use strict'
-import HttpHash from 'http-hash'
-import { send, json } from 'micro'
-import Db from 'platzigram-db'
-import DbStub from './test/stub/db'
-import config from './config'
-import utils from './lib/utils'
+
+var HttpHash = require('http-hash')
+var send = require('micro').send
+var json = require('micro').json
+var Db = require('platzigram-db')
+var DbStub = require('./test/stub/db')
+var config = require('./config')
+var utils = require('./lib/utils')
 
 const env = process.env.NODE_ENV || 'test'
 const hash = HttpHash()
