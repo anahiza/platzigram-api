@@ -65,7 +65,7 @@ hash.set('POST /:id/like', async function likePicture (req, res, params) {
   send(res, 200, image)
 })
 
-export default async function main (req, res) {
+exports default async function main (req, res) {
   let { method, url } = req
   let match = hash.get(`${method.toUpperCase()} ${url}`)
   if (match.handler) {
